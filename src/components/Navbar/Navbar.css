@@ -1,0 +1,74 @@
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--light-dark-bg);
+  border-bottom: 1.5px solid #ececec;
+}
+.nav-wrapper{
+  height: 70px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-wrapper .nav-link{
+  color: black;
+  text-decoration: none;
+}
+.logo-and-link{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo-and-link .logo{
+  cursor: pointer;
+}
+.logo-and-link ul{
+  display: flex;
+  gap: 10px;
+}
+.logo-and-link ul li{
+  list-style: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.search-and-cart{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.search-and-cart .search-icon{
+  width: 25px;
+}
+.search-and-cart .cart-box{display: flex; position: relative}
+.search-and-cart img{
+  width: 20px;
+  cursor: pointer;
+}
+.search-and-cart span{
+  height: 18px;
+  width: 25px; 
+  font-size: 0.7rem; 
+  background-color: var(--shallow-yellow-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  position: absolute;
+  right: -15px;
+  top: -10px;
+}
+
+
+/* For other devices */
+@media only screen and (width <= 830px){
+  .logo-and-link ul{
+    display: none;
+  }
+}
+@media only screen and (width <= 690px){
+  .search-and-cart form.nav-search{
+    display: none;
+  }
+}

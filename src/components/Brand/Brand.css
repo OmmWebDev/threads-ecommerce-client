@@ -1,0 +1,39 @@
+#home-brands{
+  display: flex;
+  justify-content: center;
+  background-color: var(--white-bg);
+}
+.brand-wrapper{
+  width: 70%;
+  background-color: var(--dark-green-bg);
+  padding: 40px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.brand-wrapper h2{
+  color: whitesmoke;
+  font-size: 3.5vmax;
+}
+.brand-wrapper p{
+  color: whitesmoke;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+.brands-img{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.brands-img .each-image{
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  border-radius: 10px;
+}
+.brands-img .each-image img{
+  width: 80px;
+}

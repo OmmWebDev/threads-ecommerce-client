@@ -1,0 +1,86 @@
+.product-card{
+  width: 230px;
+  border: 1.5px solid #E7E7E7;
+  border-radius: 15px;
+  position: relative;
+}
+.thumbnail{
+  width: 100%;
+  height: 220px;
+  background-color: #F1F0EC;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+}
+.thumbnail img{
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+}
+.product-card button.add-cart{
+  bottom: 10px;
+  padding: 0;
+  background-color: #F1F0EC;
+  height: 30px;
+  width: 50px;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.product-card button.add-cart img{
+  width: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.product-details{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.product-details span.title{
+  font-size: 0.9rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+span.title{
+  text-decoration: none;
+  color: black;
+}
+
+/* For other devices */
+@media only screen and (width <= 1220px){
+  .product-card{
+    width: 200px;
+  }
+}
+@media only screen and (width <= 820px){
+  .product-card{
+    width: 280px;
+  }
+  .product-card button.add-cart{
+    opacity: 1 !important;
+  }
+}
+@media only screen and (width <= 700px){
+  .product-card{
+    width: 250px;
+  }
+}
+@media only screen and (width <= 670px){
+  .product-card{
+    width: 230px;
+  }
+}
+@media only screen and (width <= 600px){
+  .product-card{
+    width: 300px;
+  }
+}

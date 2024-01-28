@@ -1,0 +1,74 @@
+#collection{
+  padding: 3.8rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--white-bg);
+}
+.collection-wrapper{
+  width: 80%;
+  max-width: 1300px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.collection-wrapper .facility{
+  width: 100%;
+}
+.collection-wrapper .facility img{
+  width: 100%;
+}
+.our-collection{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.collection-div{
+  height: 200px;
+  width: 50%;
+  display: flex;
+  background-color: var(--shallow-yellow-bg);
+  border-radius: 15px;
+  position: relative;
+}
+.collection-div .collection-details{  
+  width: 45%;
+  margin: 15px 0 0 15px;
+}
+.collection-details h2{
+  font-size: 2rem;
+  line-height: 2.8rem;
+}
+.collection-details .collection-para{
+  font-family: 'Ubuntu', sans-serif;
+  color: whitesmoke;
+  font-weight: 600;
+}
+.collection-details button{
+  margin: 20px 0 0 0;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.collection-div img{
+  height: 200px;
+  position: absolute;
+  right: 0;
+}
+
+/* For other devices */
+@media only screen and (width <= 1210px){
+  .collection-div{
+    width: 100%;
+  }
+  .collection-div .collection-details{
+    width: 65%;
+  }
+}
+
+@media only screen and (width <= 925px){
+  .our-collection{
+    flex-direction: column;
+  }
+}

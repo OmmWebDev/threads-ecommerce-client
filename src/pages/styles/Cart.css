@@ -1,0 +1,138 @@
+#cart-page{
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.cart-wrapper{
+  width: 65%;
+}
+.cart-wrapper h2{
+  text-align: center;
+  font-weight: 600;
+}
+.cart-wrapper h2 + p{
+  text-align: center;
+  margin: 15px 0 30px 0;
+  font-size: 0.9rem;
+}
+.item-box{
+  width: 100%;
+  border-top: 2px solid black;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.item-box .cart-items{
+  width: 100%;
+  height: 160px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  border-bottom: 2px solid #dedede;
+}
+.cart-items .item-image{
+  height: 100%;
+}
+.cart-items .item-image img{
+  height: 100%;
+}
+.cart-items .item-text{
+  height: 100%;
+  width: 300px;
+  position: relative;
+}
+.cart-items .item-text .item-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.cart-items .item-text .remove-item{
+  position: absolute;
+  bottom: 0;
+  text-decoration: underline;
+  color: var(--dark-green-bg);
+  font-size: 0.9rem;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.price-and-quantity{
+  width: 50%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+}
+.price-and-quantity .item-price,
+.price-and-quantity .item-quantity,
+.price-and-quantity .item-total{
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+}
+.quantity-controller{
+  width: max-content;
+  display: flex;
+  gap: 2px;
+  border: 1.5px solid var(--paragraph-color);
+}
+.quantity-controller input{
+  height: 32px;
+  width: 50px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.quantity-controller button{
+  height: 32px;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--white-bg);
+}
+.quantity-controller .minus{
+  border-right: 1.5px solid var(--paragraph-color);
+}
+.quantity-controller .plus{
+  border-left: 1.5px solid var(--paragraph-color);
+}
+.checkout{
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  float: right;
+}
+.checkout p{
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.checkout button{
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--dark-green-bg);
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
+
+@media only screen and (width <= 1000px){
+  .cart-wrapper{
+    width: 80%;
+  }
+}
+
+@media only screen and (width <= 730px){
+  .price-and-quantity .item-quantity,
+  .price-and-quantity .item-total{
+    display: none;
+  }
+  .item-price{
+    position: absolute;
+    bottom: -72px;
+    right: 10px;
+  }
+}

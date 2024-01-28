@@ -1,0 +1,28 @@
+#home-banner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: var(--light-dark-bg);
+}
+#home-banner p{
+  text-transform: uppercase;
+  font-size: 1.6vmax;
+  color: var(--paragraph-color);
+  font-family: "Ubuntu" ,sans-serif;
+}
+#home-banner h1{
+  font-size: 5vmax;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 20px 0 0 0;
+}
+#home-banner button{
+  margin: 20px 0 0 0;
+  padding: 10px 30px;
+  cursor: pointer;
+  background-color: var(--dark-green-bg);
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
