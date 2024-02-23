@@ -11,9 +11,9 @@ const Footer = () => {
         <div>
           <img src={threadsLogo} alt="Threads. Logo" />
           <div className="socials">
-            <div></div>
-            <div></div>
-            <div></div>
+            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-x-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
           </div>
           <p>All rights reserved @ Threads. 2024</p>
         </div>

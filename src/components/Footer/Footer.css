@@ -14,11 +14,14 @@ footer#footer .socials{
   display: flex;
   gap: 15px;
 }
-footer#footer .socials div{
-  height: 70px;
-  width: 70px;
-  background-color: crimson;
+footer#footer .socials i{
+  font-size: 1.2rem;
   border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s color;
+}
+footer#footer .socials i:hover{
+  color: var(--dark-green-bg);
 }
 footer#footer p{
   color: var(--paragraph-color);

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 // Hooks
 import {fetchDataFromApi} from '../../hooks/fetchData';
+import useDebounce from '../../hooks/useDebounce';
 
 const Search = ({setSearch}) => {
 
@@ -12,10 +13,12 @@ const Search = ({setSearch}) => {
   const [query, setQuery] = useState('');
   let [searchData, setSearchData] = useState(null);
   const [isSearched, setIsSearched] = useState(false);
-
+  const debouncedValue = useDebounce(query, 500);
   
   useEffect(() => {
-    fetchDataFromApi(`/api/products?[filters][title][$contains]=${query}&`).then(res => setSearchData(res));
+    if (debouncedValue) {
+      fetchDataFromApi(`/api/products?[filters][title][$contains]=${debouncedValue}&`).then(res => setSearchData(res));
+    }
     if(query.trim() == ''){
       setSearchData(null);
     }
@@ -25,7 +28,7 @@ const Search = ({setSearch}) => {
         setIsSearched(true);
       }
     }
-  }, [query]);
+  }, [debouncedValue]);
   
   return (
     <>
